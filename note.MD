@@ -1,6 +1,6 @@
-# commonjs的导入规则
+# 1. commonjs的导入规则
 
-## exports对象
+## 1.1 exports对象
 
 在commonjs的导入规则中，module.exports是个正常的js的对象。
 
@@ -10,15 +10,15 @@
 
 如果没有module.exports的话，exports也可以被导出。
 
-# nodejs内置模块
+# 2. nodejs内置模块
 
 ![node v8 architecture](./assets/node_v8.png)
 
-## 应用程序主动去获取的内置模块或方法
+## 2.1 应用程序主动去获取的内置模块或方法
 
 大多数nodejs的内置模块是通过v8的nodejs bindings，到libuv获得的。比如os模块的`os.cpus()`方法等。
 
-## os系统主动来通知的内置模块或方法
+## 2.2 os系统主动来通知的内置模块或方法
 
 在nodejs中有个Events模块，里面有个EventEmitter类。继承了这个类的子类的实例可以抛出事件，并且带出数据。
 
